@@ -1,2 +1,2 @@
-Leer supersnel modelleren met PlantUML
-======================================
+Leer supersnel modelleren in PlantUML
+=====================================
