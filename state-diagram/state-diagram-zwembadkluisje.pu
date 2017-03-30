@@ -1,0 +1,60 @@
+@startuml
+
+title Toestanddiagram Kluisje
+
+note as note1
+Gratis zwembadkluisje
+waar muntstuk in moet
+die je na gebruik weer
+terugkrijgt.
+end note
+
+[*] -right-> GeopendZonderMuntje : installatie kluisje
+GeopendZonderMuntje : deurtje staat open
+GeopendZonderMuntje : sleutel zit in slot
+GeopendZonderMuntje : sleutel is niet te draaien
+GeopendZonderMuntje : sleutel is er niet uit te halen
+GeopendZonderMuntje : geen muntje zit in sleuf
+
+GeopendZonderMuntje --> GeslotenNietAfsluitbaar : sluit deurtje
+GeslotenNietAfsluitbaar : deurtje is dicht maar is niet op slot
+GeslotenNietAfsluitbaar : sleutel zit in slot
+GeslotenNietAfsluitbaar : sleutel is niet te draaien
+GeslotenNietAfsluitbaar : sleutel is er niet uit te halen
+GeslotenNietAfsluitbaar : geen muntje zit in sleuf
+
+GeslotenNietAfsluitbaar --> GeopendZonderMuntje : open deurtje
+
+GeopendZonderMuntje --> GeopendAfsluitbaar : werp muntje in
+GeopendAfsluitbaar : deurtje staat open
+GeopendAfsluitbaar : sleutel zit in slot en is om te draaien
+GeopendAfsluitbaar : muntje zit in sleuf
+
+GeopendAfsluitbaar --> GeslotenAfsluitbaar : sluit deurtje
+GeslotenAfsluitbaar : deurtje is dicht maar niet op slot
+GeslotenAfsluitbaar : sleutel zit in slot en is om te draaien
+GeslotenAfsluitbaar : muntje zit in sleuf
+
+GeslotenAfsluitbaar --> GeopendAfsluitbaar : open deurtje
+
+GeslotenAfsluitbaar --> GeslotenSleutelGedraaid : draai sleutel
+GeslotenSleutelGedraaid : deurtje staat open
+GeslotenSleutelGedraaid : sleutel zit in slot en is om te draaien
+GeslotenSleutelGedraaid : muntje zit in sleuf
+
+GeslotenSleutelGedraaid --> Afgesloten : haal sleutel uit slot
+
+Afgesloten --> GeslotenSleutelGedraaid: steek sleutel in slot
+Afgesloten : deurtje is dicht en op slot
+Afgesloten : sleutel zit niet in slot
+Afgesloten : muntje is doorgevallen in retourbakje
+
+GeslotenSleutelGedraaid -up-> GeslotenNietAfsluitbaar : draai sleutel
+
+Afgesloten -left-> [*] : geforceerd openbreken
+
+GeopendZonderMuntje --> [*] : verwijdering kluisje
+
+GeopendAfsluitbaar --> [*] : verwijdering kluisje
+
+@enduml

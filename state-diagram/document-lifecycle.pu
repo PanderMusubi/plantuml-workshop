@@ -1,0 +1,11 @@
+@startuml
+
+[*] --> onopgeslagen : creëer
+onopgeslagen --> opgeslagen : sla op
+opgeslagen --> onopgeslagen : bewerk
+onopgeslagen --> onopgeslagen : bewerk
+opgeslagen --> archief : archiveer
+onopgeslagen --> archief : archiveer
+archief --> [*] : verwijder
+
+@enduml

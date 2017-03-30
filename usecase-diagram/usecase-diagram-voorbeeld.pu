@@ -1,0 +1,38 @@
+@startuml
+left to right direction
+Title Usecasediagram voorbeeld
+:Actor A: as a
+:Actor B: as b
+:Actor C: as c
+b <|-right- c : afgeleid van,\nerft toegang\ntot usecases
+a -down-> (usecase 1)
+a -down-> (usecase 2)
+a -down-> (usecase 3)
+b -down-> (usecase 3)
+c -down-> (usecase 4)
+
+note left of a
+Actor A mag
+gebruikmaken
+van usecases
+1, 2 en 3.
+end note
+
+note left of b
+Actor B mag
+alleen maar
+gebruikmaken
+van usecase 3.
+end note
+
+note left of c
+Actor C mag
+gebruikmaken van
+alle usecases waar
+Actor B gebruik van
+mag maken en van
+usecase 4. Dus
+usecase 3 en 4.
+end note
+
+@enduml

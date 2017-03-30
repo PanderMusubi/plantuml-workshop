@@ -1,0 +1,79 @@
+@startuml
+hide empty attributes
+hide empty methods
+skinparam titleFontName DejaVu Sans Bold
+skinparam classFontName DejaVu Sans Bold
+skinparam classattributeFontName DejaVu Sans
+
+title UML Diagrams
+
+note as note1
+sadf asdf asdf
+asdfasdf asdf
+sda sadf
+end note
+
+abstract class "Diagram" as diagram
+
+abstract class "Behaviour\lDiagram" as behaviour
+
+class "Use Case\lDiagram" as use_case {
+    +PlantUML
+}
+class "State\lDiagram" as state {
+    +PlantUML
+}
+class "Activity\lDiagram" as activity {
+    +PlantUML
+}
+abstract class "Interaction\lDiagram" as interaction
+
+class "Timing\lDiagram" as timing {
+    +PlantUML
+}
+class "Sequence\lDiagram" as sequence {
+    +PlantUML
+}
+class "Interaction\lOverview\lDiagram" as interaction_overiew
+class "Communication\lDiagram" as communication
+
+abstract class "Structure\lDiagram" as structure
+
+class "Class\lDiagram" as class {
+    +PlantUML
+}
+class "Component\lDiagram" as component {
+    +PlantUML
+}
+class "Object\lDiagram" as object {
+    +PlantUML
+}
+class "Composite\lStructure\lDiagram" as composite_structure
+class "Deployment\lDiagram" as deployment {
+    +PlantUML
+}
+class "Package\lDiagram" as package
+class "Profile\lDiagram" as profile
+
+diagram <|-- behaviour
+diagram <|-- structure
+
+structure <|--- composite_structure
+structure <|-- class
+structure <|--- deployment
+structure <|-- component
+structure <|--- package
+structure <|-- object
+structure <|--- profile
+
+behaviour <|-- use_case
+behaviour <|-- state
+behaviour <|-- interaction
+behaviour <|-- activity
+
+interaction <|-- timing
+interaction <|-- sequence
+interaction <|-- interaction_overiew
+interaction <|-- communication
+
+@enduml

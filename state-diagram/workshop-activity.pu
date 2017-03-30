@@ -1,0 +1,14 @@
+@startuml
+
+:Workshopleider geeft uitleg over UML en PlantUML;
+repeat
+    :Workshopleider legt opdracht over PlantUML uit;
+    :Deelnemer voert opdracht uit;
+    while (Deelnemer heeft een vraag?) is (ja)
+        :Workshopleider beantwoort vraag;
+        :Deelnemer voert opdracht uit;
+    endwhile (nee)
+    :Opdracht wordt gezamenlijk geëvalueerd;
+repeat while (Is er tijd voor nog een opdract?) is (ja)
+
+@enduml

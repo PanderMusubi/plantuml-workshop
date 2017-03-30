@@ -1,0 +1,15 @@
+@startuml
+
+left to right direction
+
+:BEEA-organisator: as beea
+:Deelnemer: as deelnemer
+:Workshopleider: as workshopleider
+
+deelnemer <|-right- beea
+
+deelnemer -down-> (workshop\ndeelnemen)
+beea -down-> (bijeenkomst\norganiseren)
+workshopleider -down-> (workshop\ngeven)
+
+@enduml

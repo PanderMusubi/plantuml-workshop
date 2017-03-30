@@ -1,0 +1,34 @@
+@startuml
+
+title Toestanddiagram voorbeeld
+
+state "Toestand A" as A
+A : initiële toestand
+A : niet toestand B
+
+note right of A
+• Als dit object wordt gecreëerd,
+  gaat vanuit begintoestand,
+  het object altijd eerst naar toestand A.
+• Als event x optreedt, gaat
+  dit object van toestand A naar B.
+end note
+
+state "Toestand B" as B
+B : niet toestand A
+B : mogelijk laatste toestand
+
+note right of B
+• Als event y optreedt, gaat
+  dit object van toestand B naar A.
+• Als dit object wordt opgeruimd,
+  gaat het naar de eindtoestand,
+  en houdt het op te bestaan.
+end note
+
+[*] --> A : constructie
+A --> B : event x
+B --> A : event y
+B --> [*] : destructie
+
+@enduml
