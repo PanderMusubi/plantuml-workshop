@@ -1,0 +1,16 @@
+@startuml
+
+object myCar
+myCar : color = Red~~~
+
+object "wheelLeftFront~~" as wheelLeftFront
+object "wheelRightFront~~" as wheelRightFront
+object "wheelLeftRear~~" as wheelLeftRear
+object "wheelRightRear~~" as wheelRightRear
+
+myCar *-- wheelLeftFront : wheels[0]
+myCar *-- wheelRightFront : wheels[1]
+myCar *-- wheelLeftRear : wheels[2]
+myCar *-- wheelRightRear : wheels[3]
+
+@enduml

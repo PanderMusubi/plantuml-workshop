@@ -1,0 +1,17 @@
+@startuml
+
+[*] -right-> Open
+Open -right-> OpenCoinIn : insertCoin
+
+OpenCoinIn -down-> ClosedCoinIn : closeDoor
+ClosedCoinIn -up-> OpenCoinIn : openDoor
+
+ClosedCoinIn -down-> LockedKeyTurned : turnKeyCCW
+LockedKeyTurned -left-> Locked : retractKey
+Locked -right-> LockedKeyTurned : insertKey
+LockedKeyTurned -left-> Closed : turnKeyCW
+
+Closed -up-> Open : openDoor
+Open -down-> Closed : closeDoor
+
+@enduml

@@ -1,0 +1,14 @@
+@startuml
+
+object "objectHouse~~" as objectHouse
+object "objectParent~~" as objectParent
+object "objectChild~~" as objectChild
+
+objectHouse o-- objectParent
+objectParent *-- objectChild : child
+
+objectHouse : levels = 2
+objectParent : age = 36
+objectChild : age = 8
+
+@enduml

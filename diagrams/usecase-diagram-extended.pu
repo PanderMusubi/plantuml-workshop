@@ -1,0 +1,17 @@
+@startuml
+
+skinparam TitleFontStyle Bold
+skinparam ArrowColor Black
+skinparam ActorBorderColor Black
+skinparam UsecaseBorderColor Black
+skinparam ActorBackgroundColor White
+skinparam UsecaseBackgroundColor White
+Title Usecase Diagram — Restaurant
+
+left to right direction
+
+Customer --> (order)
+Customer --> (eat)
+Customer --> (pay)
+
+@enduml

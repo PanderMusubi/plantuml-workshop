@@ -1,0 +1,17 @@
+@startuml
+
+skinparam TitleFontStyle Bold
+skinparam ArrowColor Black
+skinparam ClassBorderColor Black
+skinparam ClassBackgroundColor White
+hide empty members
+title Class diagram — UML Diagrams
+
+abstract class "Diagram~~" as diagram
+abstract class "Structure~~\lDiagram" as structure
+class "Class Diagram~~" as class
+
+diagram <|-- structure
+structure <|-right- class
+
+@enduml

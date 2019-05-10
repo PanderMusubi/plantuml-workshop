@@ -1,0 +1,14 @@
+@startuml
+
+left to right direction
+
+Customer --> (order)
+Customer --> (eat)
+Customer --> (pay)
+Staff --> (serve)
+Staff --> (cook)
+Staff --> (charge)
+
+Customer <|-right- Staff
+
+@enduml

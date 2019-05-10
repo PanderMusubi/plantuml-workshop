@@ -1,0 +1,14 @@
+@startuml
+
+class "Wheel~~" as Wheel
+class "Car~~" as Car
+class "Person~~~~" as Person
+
+abstract class "Vehicle~~~" as Vehicle
+Vehicle : -string color
+Vehicle : +getColor()
+Vehicle "1" *-up- "0..*" Wheel : wheels
+Vehicle <|-- Car
+Car "0..1" o-- "0..*" Person : passengers
+
+@enduml

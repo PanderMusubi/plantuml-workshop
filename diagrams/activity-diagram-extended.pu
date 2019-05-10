@@ -1,0 +1,20 @@
+@startuml
+
+skinparam TitleFontStyle Bold
+skinparam ArrowColor Black
+skinparam ActivityBorderColor Black
+skinparam NoteBorderColor Black
+skinparam ActivityBackgroundColor White
+skinparam NoteBackgroundColor White
+Title Activity Diagram — Making tea
+
+start
+:fill kettle with water~~;
+floating note right: use tap water~
+:switch kettle on~;
+note right
+    <b>after</b> kettle
+    is placed back
+end note
+
+@enduml

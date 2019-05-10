@@ -1,6 +1,3 @@
-*.toc
-*.snm
-*.out
-*.nav
-*.aux
-*.log
+/build
+/diagrams/*diagram-*.svg
+/images/*diagram-*.svg

@@ -1,0 +1,25 @@
+@startuml
+
+class "UsecaseDiagram~~" as UsecaseDiagram
+class "ActivityDiagram~~" as ActivityDiagram
+class "StateDiagram~~" as StateDiagram
+class "ClassDiagram~~" as ClassDiagram
+class "ObjectDiagram~~" as ObjectDiagram
+class "ComponentDiagram~~" as ComponentDiagram
+
+abstract class "Diagram~~" as Diagram
+abstract class "BehaviorDiagram~~" as BehaviorDiagram
+abstract class "StructureDiagram~~" as StructureDiagram
+
+Diagram <|-- BehaviorDiagram
+Diagram <|-- StructureDiagram
+
+BehaviorDiagram <|-- UsecaseDiagram
+BehaviorDiagram <|--- ActivityDiagram
+BehaviorDiagram <|-- StateDiagram
+
+StructureDiagram <|-- ClassDiagram
+StructureDiagram <|--- ObjectDiagram
+StructureDiagram <|-- ComponentDiagram
+
+@enduml

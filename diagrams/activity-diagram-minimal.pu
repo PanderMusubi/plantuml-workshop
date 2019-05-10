@@ -1,0 +1,18 @@
+@startuml
+
+start
+:fill kettle with water~~;
+:switch kettle on~;
+fork
+    while (water in kettle is boiling?~~~~) is (~no)
+        :kettle heats water~;
+    endwhile (yes~)
+    :kettle switches heater off~;
+fork again
+    :choose teabag~;
+    :put teabag in teapot~;
+end fork
+:poor boiled water from kettle in teapot~~;
+stop
+
+@enduml

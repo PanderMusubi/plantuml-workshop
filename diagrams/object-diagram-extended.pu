@@ -1,0 +1,19 @@
+@startuml
+
+skinparam TitleFontStyle Bold
+skinparam ArrowColor Black
+skinparam ObjectBorderColor Black
+skinparam ObjectBackgroundColor White
+title Object diagram — Car
+
+object myCar {
+    color = Red~~~
+}
+
+object "wheelLeftFront~~" as wheelLeftFront
+object "wheelLeftRear~~" as wheelLeftRear
+
+myCar *-left- wheelLeftFront : wheels[0]
+myCar *-- wheelLeftRear : wheels[1]
+
+@enduml

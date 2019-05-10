@@ -1,0 +1,42 @@
+@startuml
+skinparam componentStyle uml2
+
+title Componentendiagram Website
+
+interface "HTTPS\ntext/html" as https
+https - [Webserver]
+
+interface "HTTP\napplication/xml" as http
+http - [REST\nWebservice]
+
+[Webserver] ..> http : use
+
+interface "retrieveObject" as retrieve
+interface "storeObject" as store
+retrieve -down- [Object-\nRelational\nMapping]
+store - [Object-\nRelational\nMapping]
+
+[REST\nWebservice] -right-> retrieve
+[REST\nWebservice] --> store
+
+database "PostgreSQL" {
+    [RDBMS]
+}
+
+interface "JDBC" as jdbc
+jdbc - [RDBMS]
+
+[Object-\nRelational\nMapping] ..> jdbc : use
+
+@enduml
+
+dynamic_library -> [ORM]
+
+
+[REST Webservice] --> JDBC : use
+
+SNMP_Agent1 -left- [Webserver]
+SNMP_Agent2 -left- [REST Webservice]
+
+[SNMP Monitoring] .left.> SNMP_Agent1 : use
+[SNMP Monitoring] ..> SNMP_Agent2 : use

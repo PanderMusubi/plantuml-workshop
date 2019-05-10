@@ -1,0 +1,20 @@
+@startuml
+
+start
+:activity 1~;
+if (condition A?~~) then (yes~)
+    :activity 2~;
+else (~no)
+    :activity 3~;
+endif
+while (condition B?~~) is (~yes)
+    :activity 4~;
+endwhile (no~)
+fork
+    :activity 5~;
+fork again
+    :activity 6~;
+end fork
+stop
+
+@enduml

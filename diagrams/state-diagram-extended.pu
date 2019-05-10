@@ -1,0 +1,20 @@
+@startuml
+
+skinparam TitleFontStyle Bold
+skinparam ArrowColor Black
+skinparam StateBorderColor Black
+skinparam NoteBorderColor Black
+skinparam StateBackgroundColor White
+skinparam NoteBackgroundColor White
+title State diagram — Swimming pool locker
+Open -right-> OpenCoinIn : insert coin
+
+state "Door Open" as Open
+Open : • door is open
+Open : • key is in
+note bottom of Open : key cannot\nbe retracted
+
+state "Door Open\nCoin Inserted" as OpenCoinIn
+OpenCoinIn : • door is open\n• key is in\n• coin inserted
+
+@enduml
