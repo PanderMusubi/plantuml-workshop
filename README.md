@@ -1,6 +1,6 @@
 # Superfast modeling in PlantUML
 
-![1a35443-awb-cur-squ-5120.jpg](images/1a35443-awb-cur-squ-5120.jpg?raw=true)
+![1a35443-awb-cur-squ-5120.png](images/1a35443-awb-cur-squ-5120.png?raw=true)
 
 
 ## Summary
@@ -23,6 +23,8 @@ such as PNG, SVG and PDF. By means of guided exercises and joint evaluations,
 you will learn how to use PlantUML and discover its many advantages. Bring your
 laptop or tablet. A laptop is preferred and you can already install PlantUML.
 However, it is also possible to work online via a web interface.
+
+The presentation can be found at [`build/presentation.pdf`](build/presentation.pdf).
 
 
 ## Workshops
